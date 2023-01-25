@@ -51,7 +51,7 @@ namespace DekoratorZaliczenie
         {
             string infoPrzejazd = wrapee.PodajDanePrzejazdu(trasa);
             double optymalnaCena = double.Parse(infoPrzejazd.Substring(20)) * 0.8;
-            return infoPrzejazd + "PLN\nTrasę można zoptymalizować, aby jej koszt wyniósł: " + optymalnaCena + "PLN";
+            return infoPrzejazd + "PLN\nTrasę można zoptymalizować, aby jej koszt wyniósł: " + Math.Round(optymalnaCena,2) + "PLN";
         }
     }
 }
